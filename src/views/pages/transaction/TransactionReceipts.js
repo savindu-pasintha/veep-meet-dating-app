@@ -57,7 +57,7 @@ const TransactionReceipts = () => {
       tableColumns={[
         'Transaction No.',
         `Transaction Item`,
-        `Credit Note No.`,
+        `Receipt No.`,
         `User No.`,
         `User Name&Surename`,
         `Continent`,
