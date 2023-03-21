@@ -108,11 +108,11 @@ const _nav = [
         name: 'Refunds',
         to: '/dashboard/transaction-info/refunds',
       },
-      {
-        component: CNavItem,
-        name: 'Credit Note',
-        to: '/dashboard/transaction-info/credit-note',
-      },
+      // {
+      //   component: CNavItem,
+      //   name: 'Credit Note',
+      //   to: '/dashboard/transaction-info/credit-note',
+      // },
     ],
   },
   {

@@ -70,7 +70,7 @@ const TransactionReceipts = () => {
       tableBodyHeight="70%"
       tableBodyMaxHeight="56vh"
       onRowClickHandle={(rowData, rowMeta) => {
-        console.log('/dashboard/transaction-info/reciept', { state: { rowData, rowMeta } })
+        navigate('/dashboard/transaction-info/reciept', { state: { rowData, rowMeta } })
       }}
     />
    </div>

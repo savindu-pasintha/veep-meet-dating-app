@@ -19,7 +19,7 @@ const Transaction = ({items=['Backup', 'Excel', 'PDF', 'CSV', 'Print'],onClickha
             ))}
         </div>
       </div>
-      <div className="col-6 p-0 m-0">
+      <div className="col-6 pt-5 m-0">
         <div className="row my-3 text-center">
           <svg
             id="Group_2701"
@@ -102,9 +102,11 @@ const Transaction = ({items=['Backup', 'Excel', 'PDF', 'CSV', 'Print'],onClickha
               </tr>
               <tr>
                 <td colspan="2" className="text-end" styles={{ fontWeight: '800' }}>
-                  Total
+                  <p style={{fontWeight:"bolder"}}> Total</p>{' '}
                 </td>
-                <td className="text-center">$12,68</td>
+                <td className="text-center" styles={{ fontWeight: '800' }}>
+                <p style={{fontWeight:"bolder",}}> $12,68</p>{' '}
+                  </td>
               </tr>
             </tbody>
           </table>
