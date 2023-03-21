@@ -17,7 +17,7 @@ const TransactionReceipts = () => {
       var arr = [
         '#'+i,
         'Peach',
-        'Cre_M_0001',
+        'Rec_Pe_0001',
         'K_G_002',
         'Karlinder Governder',
         'Affrica',
