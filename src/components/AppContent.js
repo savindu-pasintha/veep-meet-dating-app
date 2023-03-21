@@ -69,8 +69,12 @@ const AppContent = ({ title }) => {
       setPageTitle('Transactional Info | List')
       document.title = 'veep meep | Admin Panel - Transactional List'
     }
+    if (path == '/dashboard/transaction-info/reciept') {
+      setPageTitle(<div className='d-block w-100 p-0 m-0'><p className='font_pageTitle p-0 m-0'>Transactional Info | Receipt</p></div>)
+      document.title = 'veep meep | Admin Panel - Transactional Receipt'
+    }
     if (path == '/dashboard/transaction-info/reciepts') {
-      setPageTitle(<div className='d-block w-100 p-0 m-0'><p className='font_pageTitle p-0 m-0'>Transactional Info | Receipts</p><p className='font_pageTitleSub pt-1  m-0'> Total Receipts | 2022 | MTD | $25000000.00</p></div>)
+      setPageTitle(<div className='d-block w-100 p-0 m-0'><p className='font_pageTitle p-0 m-0'>Transactional Info | Receipts</p></div>)
       document.title = 'veep meep | Admin Panel - Transactional Receipts'
     }
     if (path == '/dashboard/transaction-info/refunds') {
@@ -78,7 +82,8 @@ const AppContent = ({ title }) => {
       document.title = 'veep meep | Admin Panel - Refunds'
     }
     if(path == "/dashboard/transaction-info/credit-note"){
-      setPageTitle('Credit Note')
+      setPageTitle(<div className='d-block w-100 p-0 m-0'><p className='font_pageTitle p-0 m-0'>Transactional Info |  Credit Note</p></div>)
+   
       document.title = 'veep meep | Admin Panel - Credit Note'
     }
     if (path == '/dashboard/promo/code') {
@@ -154,7 +159,7 @@ const AppContent = ({ title }) => {
           '/dashboard/technical-update',
           '/dashboard/user/pre-users',
           "/dashboard/transaction-info/reciepts",
-          "/dashboard/transaction-info/credit-note"
+          
         ].includes(path) ? (
           <>
             <div className="col-md-5 com-xs-12 ">

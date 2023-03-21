@@ -24,6 +24,7 @@ const BizPumpkinPrice = React.lazy(() => import('./views/pages/subcriptions/BizP
 const TransactionList = React.lazy(() => import('./views/pages/transaction/TransactionList'))
 const TransactionReceipt = React.lazy(() => import('./views/pages/transaction/TransactionReceipt'))
 const TransactionRefunds = React.lazy(() => import('./views/pages/transaction/TransactionRefunds'))
+const TransactionReceipts = React.lazy(() => import('./views/pages/transaction/TransactionReceipts'))
 
 const PromoCode = React.lazy(() => import('./views/pages/promo/PromoCode'))
 const PromoCodeIssuedList = React.lazy(() => import('./views/pages/promo/PromoCodeIssuedList'))
@@ -94,9 +95,15 @@ const routes = [
     exact: true,
   },
   {
-    path: '/dashboard/transaction-info/reciepts',
+    path: '/dashboard/transaction-info/reciept',
     name: '',
     element: <TransactionReceipt />,
+    exact: true,
+  },
+  {
+    path: '/dashboard/transaction-info/reciepts',
+    name: '',
+    element: <TransactionReceipts />,
     exact: true,
   },
   {

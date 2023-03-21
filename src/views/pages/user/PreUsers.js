@@ -44,7 +44,7 @@ const PreUsers = () => {
               if (outPut && outPut.length > 0) {
                 let columnsData = Object.keys(outPut[0])
                 if (columnsData && columnsData.length > 0) {
-                  setColumns(tableColumnsDataReFormatted(columnsData))
+                  setColumns(columnsData)
                   setData(outPut)
                 }
                

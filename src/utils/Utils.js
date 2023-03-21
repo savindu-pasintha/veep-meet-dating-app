@@ -79,17 +79,27 @@ export const validateFromDateTodate = (fromDateStr, toDateStr) => {
 
 export const tableColumnsDataReFormatted = (columnsData) => {
   var newColumns = []
-  newColumns = columnsData.map((values, ind) => {
-    if (values) {
-      return {
-        label: (
-          <p className="text-capitalize" style={{ color: '#FFF' }}>
-            {values}
-          </p>
-        ),
-        name: values,
+   newColumns = columnsData.map((values, ind) => {
+      if (typeof values === "string") {
+        return {
+          label: (
+            <p className="text-capitalize" style={{ color: '#FFF' }}>
+              {values}
+            </p>
+          ),
+          name: values,
+        }
+      }else{
+        return {
+          label: (
+            <p className="text-capitalize" style={{ color: '#FFF' }}>
+              {values?.name}
+            </p>
+          ),
+          name: values?.name,
+        }
       }
-    }
-  })
+    })
+ 
   return newColumns
 }

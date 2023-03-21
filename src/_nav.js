@@ -98,15 +98,20 @@ const _nav = [
         to: '/dashboard/transaction-info/list',
         icon: '',
       },
-      // {
-      //   component: CNavItem,
-      //   name: 'Receipts',
-      //   to: '/dashboard/transaction-info/reciepts',
-      // },
+      {
+        component: CNavItem,
+        name: 'Receipts',
+        to: '/dashboard/transaction-info/reciepts',
+      },
       {
         component: CNavItem,
         name: 'Refunds',
         to: '/dashboard/transaction-info/refunds',
+      },
+      {
+        component: CNavItem,
+        name: 'Credit Note',
+        to: '/dashboard/transaction-info/credit-note',
       },
     ],
   },

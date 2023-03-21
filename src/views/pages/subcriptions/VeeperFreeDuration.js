@@ -40,7 +40,7 @@ const VeeperFreeDuration = () => {
       step1_label="Veeper Free Duration"
       step1={{
         label: { key: 'Current Veeper Duration', value: '8 weeks' },
-        insert: { key: 'Inser Duration', value: '' },
+        insert: { key: 'Insert Duration', value: '' },
         button: { key: 'Submit Duration' },
       }}
       step2={{

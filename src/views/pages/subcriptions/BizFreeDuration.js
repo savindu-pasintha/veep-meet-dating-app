@@ -5,7 +5,7 @@ const BizFreeDuration = () => {
   return <VerticalStepper step1_label="Biz Free Duration" 
   step1={{
     label: { key: 'Current Veeper Duration', value: '8 weeks' },
-    insert: { key: 'Inser Duration', value: '' },
+    insert: { key: 'Insert Duration', value: '' },
     button: { key: 'Submit Duration' },
   }}
   step2={{

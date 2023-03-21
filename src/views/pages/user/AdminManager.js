@@ -407,7 +407,7 @@ const AdminManager = () => {
                 className="mx-0 py-0 my-1  "
                 style={{ width: 'auto', border: 'none',fontWeight:600 }}
               >
-               Password
+               Password ******
               </p>
             </div>
             <div className={`d-flex `}>

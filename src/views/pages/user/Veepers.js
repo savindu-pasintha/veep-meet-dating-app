@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Table4 from 'src/components/table/Table4'
+import { tableColumnsDataReFormatted } from 'src/utils/Utils'
 
 const Veepers = () => {
   const navigate = useNavigate()
   const [data, setData] = useState([])
   const [columns, setColumns] = useState([
-    { name: 'User  No.', label: 'User_No.', options: { filterOptions: { fullWidth: true } } },'User','User_Id',
-    {
-      label: 'User_Name_&_Surename',
-      name: 'User Name & Surename',
-    },
+    'User  No.','User','User_Id',
+    'User_Name_&_Surename',
     `Account`,
     `Date_&_Time_Created`,
     `Date_&_Time_Last_Active`,
@@ -113,6 +111,8 @@ const Veepers = () => {
     for (var y = 0; y < 100; y++) {
       arrr.push(arr)
     }
+   var new_columns = tableColumnsDataReFormatted(columns)
+   setColumns(new_columns)
     setData(arrr)
   }, [])
   return (

@@ -70,7 +70,7 @@ const TransactionRefunds = () => {
       tableBodyHeight="70%"
       tableBodyMaxHeight="56vh"
       onRowClickHandle={(rowData, rowMeta) => {
-        navigate('/dashboard/transaction-info/reciepts', { state: { rowData, rowMeta } })
+        navigate('/dashboard/transaction-info/reciept', { state: { rowData, rowMeta } })
       }}
     />
    </div>

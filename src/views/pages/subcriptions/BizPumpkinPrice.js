@@ -5,7 +5,7 @@ const BizPumpkinPrice = () => {
   return <VerticalStepper step1_label="Biz" 
   step1={{
     label: { key: 'Current Veeper Price', value: '$ 12,34' },
-    insert: { key: 'Inser Price', value: '' },
+    insert: { key: 'Insert Price', value: '' },
     button: { key: 'Submit' },
   }}
   step2={{

@@ -46,29 +46,14 @@ const TransactionReceipt = () => {
   }, [])
   return (
    <div className='p-1'>
-    <Transaction />
-     {/* <Table4
-      tableTitle={''}
-      tableData={data}
-      tableColumns={[
-        'Transaction No.',
-        `Transaction Item`,
-        `Credit Note No.`,
-        `User No.`,
-        `User Name&Surename`,
-        `Continent`,
-        `Country & State/Province`,
-        'City',
-        'Payment Method',
-        'Date Time',
-        'Action',
-      ]}
-      tableBodyHeight="70%"
-      tableBodyMaxHeight="56vh"
-      onRowClickHandle={(rowData, rowMeta) => {
-        console.log('/dashboard/user/veeper-profile', { state: { rowData, rowMeta } })
-      }}
-    /> */}
+    <Transaction data={{ header:[{ key: 'Receipt Number', value: 'REC_VP_000001' }] ,list:[
+            { key: 'Subscription', value: 'Insert' },
+            { key: 'Date', value: 'Year, Day at Time of Purchase' },
+            { key: 'Paid with', value: 'Insert' },
+            { key: 'Name', value: 'Insert' },
+            { key: 'Surname', value: 'Insert' },
+            { key: 'Username', value: 'insert@insert.com' }
+          ], tableItems:['Mango', '1  x  $12,34', '$12,34']}} />
    </div>
   )
 }

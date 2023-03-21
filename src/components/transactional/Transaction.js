@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Transaction = ({items=['Backup', 'Excel', 'PDF', 'CSV', 'Print'],onClickhandleChange}) => {
+const Transaction = ({items=['Backup', 'Excel', 'PDF', 'CSV', 'Print'],onClickhandleChange,data}) => {
   return (
     <div className="row p-0 m-0">
       <div className="col-12 d-flex justify-content-center">
@@ -59,21 +59,14 @@ const Transaction = ({items=['Backup', 'Excel', 'PDF', 'CSV', 'Print'],onClickha
           </svg>
         </div>
         <div className="row text-center p-0">
-          {[{ key: 'Receipt Number', value: 'REC_VP_000001' }].map((item, ind) => (
+          {data?.header.map((item, ind) => (
             <label className="p-0 m-0">
               {item && item?.key}:{item && item?.value}
             </label>
           ))}
         </div>
         <div className="row p-0 mx-1">
-          {[
-            { key: 'Subscription', value: 'Insert' },
-            { key: 'Date', value: 'Year, Day at Time of Purchase' },
-            { key: 'Paid with', value: 'Insert' },
-            { key: 'Name', value: 'Insert' },
-            { key: 'Surname', value: 'Insert' },
-            { key: 'Username', value: 'insert@insert.com' },
-          ].map((item, ind) => (
+          {data?.list.map((item, ind) => (
             <div>
               <label>
                 {item && item?.key}:{item && item?.value}
@@ -95,7 +88,7 @@ const Transaction = ({items=['Backup', 'Excel', 'PDF', 'CSV', 'Print'],onClickha
             </thead>
             <tbody>
               <tr>
-                {['Mango', '1  x  $12,34', '$12,34'].map((item, ind) => (
+                {data?.tableItems.map((item, ind) => (
                   <td scope="col" className="text-center ">
                     {item && item}
                   </td>
@@ -105,7 +98,7 @@ const Transaction = ({items=['Backup', 'Excel', 'PDF', 'CSV', 'Print'],onClickha
                 <td colspan="2" className="text-end " styles={{ fontWeight: '800' }}>
                   Tax
                 </td>
-                <td className="text-center">$0,68</td>
+                <td className="text-center">$0,34</td>
               </tr>
               <tr>
                 <td colspan="2" className="text-end" styles={{ fontWeight: '800' }}>

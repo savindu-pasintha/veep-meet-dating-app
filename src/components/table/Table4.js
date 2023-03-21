@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import MUIDataTable from 'mui-datatables'
 import { ThemeProvider } from '@mui/material/styles'
 import { createTheme } from '@mui/material/styles'
@@ -77,9 +77,8 @@ const Table4 = ({
   const [filterBtn, setFilterBtn] = useState(true)
   const [fromDate, setFromDate] = useState("")
   const [toDate, setToDate] = useState("")
-
-  const tableColumnsData = tableColumnsDataReFormatted(tableColumns)
-  console.log(tableColumnsData)
+  const [tableColumnsData,setTableColumnsData]=useState([])
+  const [tableRowsData,setTableRowData]=useState([])
 
   const columns = [
     { name: 'Name', options: { filterOptions: { fullWidth: true } } },
@@ -144,6 +143,12 @@ const Table4 = ({
        },
   }
 
+useEffect(()=>{
+  var new_columns = tableColumnsDataReFormatted(tableColumns)
+  setTableColumnsData(new_columns)
+  setTableRowData(tableData)
+},[tableColumns.length,tableData.length])
+  
   return (
     <>
       {[
@@ -178,8 +183,8 @@ const Table4 = ({
         <ThemeProvider theme={getMuiCustomizedTheme}>
           <MUIDataTable
             title={tableTitle ? tableTitle : ''}
-            data={tableData}
-            columns={tableColumns}
+            data={tableRowsData}
+            columns={tableColumnsData}
             options={options}
           />
         </ThemeProvider>
