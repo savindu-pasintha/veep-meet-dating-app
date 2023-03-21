@@ -1,0 +1,33 @@
+.box{
+    max-width: 350px;  
+}
+.box_item{
+    border:1px solid #9D9B9D;
+}
+.updateTime{
+    width: auto;
+    background-color: #9D9B9D;
+    border-radius: 10px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: lowercase;
+}
+.label{
+    font-size: 12px;
+    color: #9D9B9D;
+    font-weight: bold;
+    text-transform: capitalize;
+    width: 200px;
+}
+.updateTime:hover{
+  color: #f3ebf3;
+}
+.viewAllItemButton{
+    color:blue;
+    font-size: 15px;
+    font-weight: 500;
+}
+.viewAllItemButton:hover{
+    cursor: pointer;
+}
