@@ -3,6 +3,7 @@ import { Navigate, Outlet, Route, Routes, useLocation } from 'react-router-dom'
 import { CContainer, CHeaderDivider, CSpinner } from '@coreui/react'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { CiCircleRemove } from 'react-icons/ci'
+import {IoAddCircleSharp} from 'react-icons/io5'
 import '../scss/custom-styles.css'
 import {
   currentDate,
@@ -123,8 +124,15 @@ const AppContent = ({ title }) => {
       document.title = 'veep meep | Admin Panel - Contact Us'
     }
     if (path == '/dashboard/complaints-and-supports') {
-      setPageTitle('Complaints & Support')
-      document.title = 'veep meep | Admin Panel - Complaints & Support'
+      setPageTitle(
+        <div className="d-block w-100 p-0 m-0">
+          <p className="font_pageTitle ">Complaints & Support Tickets</p>{' '}
+          <button type="button " className="mx-0 py-0 add_ticket_button my-2 d-flex" style={{ width: 'auto' }} onClick={(e)=>{console.log(e)}}>
+             <p className='font_pageTitleSub p-0 m-0'> <IoAddCircleSharp className='p-0 m-0' style={{height:23,width:23}} /> Add Ticket </p>   
+          </button>
+        </div>,
+      )
+      document.title = 'veep meep | Admin Panel - Complaints & Support Tickets'
     }
 
     if (path == '/dashboard/user/veeper-profile') {

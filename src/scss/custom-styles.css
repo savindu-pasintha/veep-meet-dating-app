@@ -64,6 +64,22 @@
 .print_button:hover {
   border: 1px solid #616161;
 }
+.add_ticket_button{
+  height: 25px;
+  max-width: 250px;
+  min-width: 100px;
+  border-radius: 25px;
+  border: 1px solid #616161;
+  color: #616161;
+  background-color: #fff;
+  font-size: 16px;
+  padding:0px 0px 0px 0px;
+  margin:0px 0px 0px 0px
+  
+}
+.add_ticket_button:hover {
+  border:1px solid #616161;
+}
 .search_input_box {
   height: 50px;
   width: 250px;
